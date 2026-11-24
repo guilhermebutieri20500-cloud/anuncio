@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Produtividade &amp; IA — Guia Prático</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="portal-header">
+        <div class="header-inner">
+            <div>
+                <p class="header-kicker">Portal de Tecnologia &amp; Execução</p>
+                <h1>Portal Produtividade &amp; IA</h1>
+            </div>
+            <button type="button" class="btn-login-open" id="openLoginModal">Entrar</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="post">
+            <span class="post-category">Destaque</span>
+            <h2>Como usar Inteligência Artificial na prática para estudar, trabalhar e tirar projetos do papel</h2>
+            <p>Muita gente testa ferramentas de IA de forma solta e acaba perdendo tempo refazendo pedidos. O verdadeiro ganho acontece quando você cria rotinas claras de pesquisa, revisão, organização e prototipagem.</p>
+            <p>Seja para resumir conteúdos complexos, estruturar apresentações, acelerar tarefas técnicas ou montar projetos do zero, um método direto faz toda a diferença no resultado final.</p>
+            <p class="author-credit">Curadoria e projeto por <strong>Guilherme Butieri</strong>.</p>
+        </article>
+
+        <!-- ESPAÇO DO ANÚNCIO (BANNER) -->
+        <aside class="ad-banner" aria-label="Anúncio do e-book">
+            <span class="ad-tag">Guia em Destaque</span>
+            <div class="ad-content">
+                <h3>IA na Prática: Do Zero à Produtividade Real</h3>
+                <p>Descubra fluxos prontos, estrutura de prompts e métodos de estudo e criação para ganhar horas na sua semana.</p>
+                <!-- Link com parâmetro de rastreamento -->
+                <a href="landing.html?origem=banner_artigo" class="btn-ad">Acessar Página do E-book</a>
+            </div>
+        </aside>
+    </main>
+
+    <!-- MODAL DE LOGIN (Pronto para integrar sua lógica) -->
+    <div class="modal-backdrop hidden" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+        <div class="modal-card">
+            <button type="button" class="modal-close" id="closeLoginModal" aria-label="Fechar janela">&times;</button>
+            <h2 id="loginTitle">Área do Leitor</h2>
+            <p class="modal-subtitle">Entre com seu e-mail para acessar seus materiais salvos.</p>
+
+            <form id="loginForm" novalidate>
+                <div class="input-group">
+                    <label for="loginEmail">E-mail *</label>
+                    <input type="email" id="loginEmail" placeholder="voce@exemplo.com" required>
+                    <small class="error-msg" id="erroLoginEmail"></small>
+                </div>
+
+                <div class="input-group">
+                    <label for="loginSenha">Senha *</label>
+                    <input type="password" id="loginSenha" placeholder="Digite sua senha" required>
+                    <small class="error-msg" id="erroLoginSenha"></small>
+                </div>
+
+                <button type="submit" class="btn-submit">Entrar na Conta</button>
+            </form>
+
+            <div id="loginStatus" class="login-status hidden"></div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>Projeto desenvolvido por Guilherme Butieri &bull; Conteúdo focado em produtividade e IA aplicada.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-book: IA na Prática para Produtividade, Estudos e Projetos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="lp-body">
+    <main class="lp-container">
+        <section class="lp-hero">
+            <span class="badge">EDIÇÃO ATUALIZADA</span>
+            <h1>Ganhe Velocidade nos Estudos, no Trabalho e nos Seus Projetos com IA</h1>
+            <p class="subtitle">Um guia direto ao ponto com métodos práticos, modelos de comandos e fluxos reais para sair da teoria e produzir com qualidade todos os dias.</p>
+
+            <ul class="benefits">
+                <li>✔ Método passo a passo para transformar ideias em planos de ação</li>
+                <li>✔ Modelos de prompts para estudos, resumos, escrita e organização</li>
+                <li>✔ Como evitar respostas genéricas e revisar resultados com critério</li>
+                <li>✔ Fluxos práticos para projetos digitais, apresentações e rotina</li>
+            </ul>
+
+            <div class="lp-actions-top">
+                <button type="button" class="btn-ghost" id="openLoginModal">Já tenho cadastro — Entrar</button>
+                <a href="index.html" class="link-subtle">Voltar ao portal</a>
+            </div>
+        </section>
+
+        <section class="lp-form-box">
+            <h2>Receba a amostra gratuita e o acesso ao e-book</h2>
+            <form id="leadForm" novalidate>
+                <div class="input-group">
+                    <label for="nome">Nome Completo *</label>
+                    <input type="text" id="nome" placeholder="Ex: Guilherme Butieri" required>
+                    <small class="error-msg" id="erroNome"></small>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Melhor E-mail *</label>
+                    <input type="email" id="email" placeholder="Ex: contato@email.com" required>
+                    <small class="error-msg" id="erroEmail"></small>
+                </div>
+
+                <div class="input-group">
+                    <label for="whatsapp">WhatsApp *</label>
+                    <input type="tel" id="whatsapp" placeholder="(15) 99999-9999" maxlength="15" required>
+                    <small class="error-msg" id="erroWhats"></small>
+                </div>
+
+                <!-- Campo oculto para guardar de qual anúncio o lead veio -->
+                <input type="hidden" id="origemLead" name="origem">
+
+                <button type="submit" class="btn-submit">QUERO RECEBER O E-BOOK</button>
+                <p class="privacy-note">Seus dados são usados apenas para envio do material e acesso.</p>
+            </form>
+
+            <!-- Mensagem de Sucesso (Oculta inicialmente) -->
+            <div id="successBox" class="success-box hidden">
+                <h3>Tudo pronto, <span id="userNameSuccess"></span>!</h3>
+                <p>Registramos seu acesso ao material <strong>IA na Prática</strong>. Confira seu e-mail (inclusive a caixa de spam).</p>
+                <a href="index.html" class="btn-back">Voltar ao Portal</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL DE LOGIN -->
+    <div class="modal-backdrop hidden" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+        <div class="modal-card">
+            <button type="button" class="modal-close" id="closeLoginModal" aria-label="Fechar janela">&times;</button>
+            <h2 id="loginTitle">Entrar na Conta</h2>
+            <p class="modal-subtitle">Acesse sua área de leitor com e-mail e senha.</p>
+
+            <form id="loginForm" novalidate>
+                <div class="input-group">
+                    <label for="loginEmail">E-mail *</label>
+                    <input type="email" id="loginEmail" placeholder="voce@exemplo.com" required>
+                    <small class="error-msg" id="erroLoginEmail"></small>
+                </div>
+
+                <div class="input-group">
+                    <label for="loginSenha">Senha *</label>
+                    <input type="password" id="loginSenha" placeholder="Digite sua senha" required>
+                    <small class="error-msg" id="erroLoginSenha"></small>
+                </div>
+
+                <button type="submit" class="btn-submit">Entrar</button>
+            </form>
+
+            <div id="loginStatus" class="login-status hidden"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
